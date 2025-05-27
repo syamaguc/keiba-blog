@@ -1,0 +1,8 @@
+jupyterlab
+jupyterlab-vim
+jupyterlab_code_formatter
+jupyter-book
+pandas
+matplotlib
+black
+isort

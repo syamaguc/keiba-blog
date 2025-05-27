@@ -1,0 +1,29 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/intro
+parts:
+  - caption: レース
+    chapters:
+      - file: content/Japan-Derby
+  - caption: 血統
+    chapters:
+      - file: content/Royal-Charger
+        sections:
+          - file: notebooks/Deep-Impact
+          - file: notebooks/Daiwa-Major
+      - file: content/Native-Dancer.md
+        sections:
+          - file: notebooks/Lord-Kanaloa
+      - file: content/Nearctic
+        sections:
+          - file: notebooks/Kurofune
+  - caption: 競馬場
+    chapters:
+      - file: content/Tokyo
+        sections:
+          - file: notebooks/Tokyo-1600m
+      - file: content/Nakayama
+        sections:
+          - file: notebooks/Nakayama-2000m
