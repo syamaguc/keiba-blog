@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write # ghp-import が gh-pages へ push できるように
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
