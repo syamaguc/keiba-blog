@@ -72,6 +72,8 @@ def result_df():
         )
         for chunk in chunk_iter:
             df = pd.concat([df, chunk], ignore_index=True)
+    # git-lfs 対策
+    df = df[~df.apply(lambda row: row.astype(str).str.contains("git-lfs", case=False).any(), axis=1)]
     # 扱い易いようにデータの前処理
     # 年、月、日からdateカラム（YYMMDD）を生成
     df["レース日"] = (
