@@ -4,26 +4,29 @@
 format: jb-book
 root: content/intro
 parts:
-  - caption: レース
+  - caption: 1. 準備
     chapters:
-      - file: content/Japan-Derby
-  - caption: 血統
+      - file: notebooks/1.1_Pre-Processing
+  - caption: 2. レース
     chapters:
-      - file: content/Royal-Charger
-        sections:
-          - file: notebooks/Deep-Impact
-          - file: notebooks/Daiwa-Major
-      - file: content/Native-Dancer.md
-        sections:
-          - file: notebooks/Lord-Kanaloa
-      - file: content/Nearctic
-        sections:
-          - file: notebooks/Kurofune
-  - caption: 競馬場
+      - file: notebooks/2.1_Japan-Derby
+  - caption: 3. 血統
     chapters:
-      - file: content/Tokyo
+      - file: content/3.1.0_Royal-Charger
         sections:
-          - file: notebooks/Tokyo-1600m
-      - file: content/Nakayama
+          - file: notebooks/3.1.1_Deep-Impact
+          - file: notebooks/3.1.2_Daiwa-Major
+      - file: content/3.2.0_Native-Dancer.md
         sections:
-          - file: notebooks/Nakayama-2000m
+          - file: notebooks/3.2.1_Lord-Kanaloa
+      - file: content/3.3.0_Nearctic
+        sections:
+          - file: notebooks/3.3.1_Kurofune
+  - caption: 4. 競馬場
+    chapters:
+      - file: content/4.1.0_Tokyo
+        sections:
+          - file: notebooks/4.1.1_Tokyo-1600m
+      - file: content/4.2.0_Nakayama
+        sections:
+          - file: notebooks/4.2.1_Nakayama-2000m
