@@ -26,6 +26,13 @@ jobs:
           lfs: true
           fetch-depth: 1
 
+      - name: Install Ricty Diminished font
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-ricty-diminished
+          fc-cache -fv
+          fc-list | grep -i "Ricty" || true
+
       # Install dependencies
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
