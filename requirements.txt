@@ -4,5 +4,6 @@ jupyterlab_code_formatter
 jupyter-book
 pandas
 matplotlib
+seaborn
 black
 isort

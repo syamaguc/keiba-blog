@@ -4,10 +4,6 @@
 format: jb-book
 root: content/intro
 parts:
-  - caption: 0. 変数 / 定数 / 関数
-    chapters:
-      - file: ./notebooks/0.1_Variables-and-Constants
-      - file: ./notebooks/0.2_Function
   - caption: 1. 準備
     chapters:
       - file: notebooks/1.1_Pre-Processing
