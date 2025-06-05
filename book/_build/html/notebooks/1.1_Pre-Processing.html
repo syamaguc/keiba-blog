@@ -193,7 +193,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">3. 血統</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../content/3.1.0_Royal-Charger.html">ロイヤルチャージャー系</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.1.1_Deep-Impact.html">ディープインパクト産駒の分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.1_Deep-Impact.html">ディープインパクト産駒</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.1.2_Daiwa-Major.html">ダイワメジャー産駒の分析</a></li>
 </ul>
 </details></li>
@@ -371,14 +371,21 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">result_df</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">result_df</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">run</span> 0.2_Function.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2021-2024 東京開催</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">result_df</span><span class="p">(</span><span class="s2">&quot;2021&quot;</span><span class="p">,</span> <span class="s2">&quot;2024&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;東&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -433,76 +440,76 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>127669</th>
-      <td>23</td>
+      <th>23604</th>
+      <td>24</td>
       <td>5</td>
-      <td>14</td>
-      <td>1</td>
-      <td>新潟</td>
-      <td>6</td>
-      <td>1</td>
-      <td>未勝利</td>
-      <td>7</td>
+      <td>19</td>
+      <td>2</td>
+      <td>東京</td>
+      <td>10</td>
+      <td>8</td>
+      <td>調布特別･2勝</td>
+      <td>43</td>
       <td>芝</td>
       <td>...</td>
-      <td>仲谷善彰</td>
-      <td>小泉牧場</td>
-      <td>ゴールドアクター</td>
-      <td>グッドプリン</td>
-      <td>ブラックタイド</td>
-      <td>黒鹿</td>
-      <td>2020-04-07</td>
-      <td>44.9</td>
-      <td>52.0</td>
-      <td>2023-05-14</td>
+      <td>田中純一</td>
+      <td>杵臼牧場</td>
+      <td>シルバーステート</td>
+      <td>レーヌユニヴェール</td>
+      <td>タイキシャトル</td>
+      <td>青鹿</td>
+      <td>200320</td>
+      <td>17.4</td>
+      <td>55.9</td>
+      <td>2024-05-19</td>
     </tr>
     <tr>
-      <th>268380</th>
-      <td>16</td>
+      <th>26224</th>
+      <td>21</td>
+      <td>10</td>
+      <td>23</td>
       <td>4</td>
+      <td>東京</td>
+      <td>5</td>
+      <td>11</td>
+      <td>富士ＳG2</td>
+      <td>179</td>
+      <td>芝</td>
+      <td>...</td>
+      <td>シルクレーシング</td>
+      <td>社台コーポレーショ</td>
+      <td>リアルインパクト</td>
+      <td>アンティフォナ</td>
+      <td>Songandaprayer</td>
+      <td>鹿毛</td>
+      <td>170202</td>
+      <td>12.0</td>
+      <td>51.4</td>
+      <td>2021-10-23</td>
+    </tr>
+    <tr>
+      <th>24809</th>
+      <td>24</td>
+      <td>6</td>
+      <td>15</td>
       <td>3</td>
-      <td>3</td>
-      <td>中山</td>
-      <td>4</td>
-      <td>2</td>
+      <td>東京</td>
+      <td>5</td>
+      <td>7</td>
       <td>未勝利</td>
       <td>7</td>
       <td>ダ</td>
       <td>...</td>
-      <td>礒野日出夫</td>
-      <td>阿部栄乃進</td>
-      <td>エンパイアメーカー</td>
-      <td>ギンマクノヨウセイ</td>
-      <td>グラスワンダー</td>
-      <td>鹿毛</td>
-      <td>2013-05-31</td>
-      <td>NaN</td>
-      <td>42.3</td>
-      <td>2016-04-03</td>
-    </tr>
-    <tr>
-      <th>98109</th>
-      <td>23</td>
-      <td>1</td>
-      <td>15</td>
-      <td>1</td>
-      <td>中京</td>
-      <td>6</td>
-      <td>5</td>
-      <td>未勝利</td>
-      <td>7</td>
-      <td>芝</td>
-      <td>...</td>
-      <td>ラッキーフィールド</td>
-      <td>社台ファーム</td>
-      <td>エピファネイア</td>
-      <td>エアワンピース</td>
-      <td>ロックオブジブラルタル</td>
+      <td>小島將之</td>
+      <td>鹿戸和幸</td>
+      <td>ユアーズトゥルーリ</td>
+      <td>ナリタアルテミス</td>
+      <td>ネオユニヴァース</td>
       <td>栗毛</td>
-      <td>2020-04-17</td>
-      <td>36.0</td>
-      <td>52.6</td>
-      <td>2023-01-15</td>
+      <td>210415</td>
+      <td>10.8</td>
+      <td>45.9</td>
+      <td>2024-06-15</td>
     </tr>
   </tbody>
 </table>
@@ -554,14 +561,43 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  7,  15,  23,  43,  67, 179, 163, 131, 195, 147, 115])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([  7,  15,  23,  43,  67, 115, 163, 131, 195, 179])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;補正タイム&#39;</span><span class="p">,</span> <span class="s1">&#39;走破タイム&#39;</span><span class="p">,</span> <span class="s1">&#39;走破時計&#39;</span><span class="p">,</span> <span class="s1">&#39;上がり3Fタイム&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ====================================</span>
+<span class="c1">#              レースID</span>
+<span class="c1"># ====================================</span>
+<span class="c1">#</span>
+<span class="c1">#            ppyyknrruu</span>
+<span class="c1">#</span>
+<span class="c1"># pp:場所コード</span>
+<span class="c1"># yy:西暦下2桁</span>
+<span class="c1"># k・kk:回次</span>
+<span class="c1"># n・nn:日次</span>
+<span class="c1"># rr:レース番号</span>
+<span class="c1"># uu:馬番</span>
+<span class="c1">#</span>
+<span class="c1"># ※ 場所コード先頭に0がつくケースとつかないケースあり</span>
+
+<span class="c1"># ====================================</span>
+<span class="c1">#              場所コード</span>
+<span class="c1"># ====================================</span>
+<span class="c1"># 01: 札幌</span>
+<span class="c1"># 02: 函館</span>
+<span class="c1"># 03: 福島</span>
+<span class="c1"># 04: 新潟</span>
+<span class="c1"># 05: 東京</span>
+<span class="c1"># 06: 中山</span>
+<span class="c1"># 07: 中京</span>
+<span class="c1"># 08: 京都</span>
+<span class="c1"># 09: 阪神</span>
+<span class="c1"># 10: 小倉</span>
+
+<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;レースID&quot;</span><span class="p">,</span> <span class="s2">&quot;補正タイム&quot;</span><span class="p">,</span> <span class="s2">&quot;走破タイム&quot;</span><span class="p">,</span> <span class="s2">&quot;上がり3Fタイム&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -584,33 +620,33 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>レースID</th>
       <th>補正タイム</th>
       <th>走破タイム</th>
-      <th>走破時計</th>
       <th>上がり3Fタイム</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>447215</th>
-      <td>78</td>
-      <td>123.1</td>
-      <td>2031</td>
-      <td>35.8</td>
+      <th>29570</th>
+      <td>0522290708</td>
+      <td>75</td>
+      <td>83.5</td>
+      <td>35.4</td>
     </tr>
     <tr>
-      <th>256330</th>
-      <td>88</td>
-      <td>96.2</td>
-      <td>1362</td>
-      <td>33.9</td>
+      <th>29140</th>
+      <td>0522261104</td>
+      <td>109</td>
+      <td>92.6</td>
+      <td>34.6</td>
     </tr>
     <tr>
-      <th>371007</th>
-      <td>83</td>
-      <td>120.8</td>
-      <td>2008</td>
-      <td>39.2</td>
+      <th>6266</th>
+      <td>521340602</td>
+      <td>65</td>
+      <td>96.0</td>
+      <td>37.7</td>
     </tr>
   </tbody>
 </table>

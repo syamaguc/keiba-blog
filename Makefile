@@ -1,3 +1,6 @@
+all:
+	jupyter-lab
+
 build: clean
 	jb build book
 

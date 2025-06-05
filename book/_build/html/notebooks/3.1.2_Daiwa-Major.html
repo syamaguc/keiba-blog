@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ネイティヴダンサー系" href="../content/3.2.0_Native-Dancer.html" />
-    <link rel="prev" title="ディープインパクト産駒の分析" href="3.1.1_Deep-Impact.html" />
+    <link rel="prev" title="ディープインパクト産駒" href="3.1.1_Deep-Impact.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,7 +193,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">3. 血統</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../content/3.1.0_Royal-Charger.html">ロイヤルチャージャー系</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="3.1.1_Deep-Impact.html">ディープインパクト産駒の分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1.1_Deep-Impact.html">ディープインパクト産駒</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">ダイワメジャー産駒の分析</a></li>
 </ul>
 </details></li>
@@ -368,197 +368,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>ダイワメジャー産駒の分析<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">result_df</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">result_df</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 父ダイワメジャー or 母父ダイワメジャー</span>
-
-<span class="n">sire</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;父馬名&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;ダイワメジャー&quot;</span><span class="p">)</span>
-<span class="n">ground_type</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;芝・ダ&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;芝&quot;</span><span class="p">)</span>
-<span class="n">cond</span> <span class="o">=</span> <span class="n">sire</span> <span class="o">&amp;</span> <span class="n">ground_type</span>
-<span class="n">df_daiwa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cond</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_daiwa</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>年</th>
-      <th>月</th>
-      <th>日</th>
-      <th>回次</th>
-      <th>場所</th>
-      <th>日次</th>
-      <th>レース番号</th>
-      <th>レース名</th>
-      <th>クラスコード</th>
-      <th>芝・ダ</th>
-      <th>...</th>
-      <th>馬主名</th>
-      <th>生産者名</th>
-      <th>父馬名</th>
-      <th>母馬名</th>
-      <th>母の父馬名</th>
-      <th>毛色</th>
-      <th>生年月日</th>
-      <th>単勝オッズ</th>
-      <th>PCI</th>
-      <th>レース日</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>125990</th>
-      <td>23</td>
-      <td>11</td>
-      <td>5</td>
-      <td>3</td>
-      <td>福島</td>
-      <td>2</td>
-      <td>2</td>
-      <td>未勝利*</td>
-      <td>7</td>
-      <td>芝</td>
-      <td>...</td>
-      <td>ノースヒルズ</td>
-      <td>ノースヒルズ</td>
-      <td>ダイワメジャー</td>
-      <td>エミナ</td>
-      <td>Danehill</td>
-      <td>鹿毛</td>
-      <td>2021-04-06</td>
-      <td>15.9</td>
-      <td>40.4</td>
-      <td>2023-11-05</td>
-    </tr>
-  </tbody>
-</table>
-<p>1 rows × 51 columns</p>
-</div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 距離を指定された範囲で分類</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">classify_distance</span><span class="p">(</span><span class="n">distance</span><span class="p">):</span>
-    <span class="k">if</span> <span class="mi">1000</span> <span class="o">&lt;=</span> <span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">1399</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;1000-1399m&#39;</span>
-    <span class="k">elif</span> <span class="mi">1400</span> <span class="o">&lt;=</span> <span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">1799</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;1400-1799m&#39;</span>
-    <span class="k">elif</span> <span class="mi">1800</span> <span class="o">&lt;=</span> <span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">2199</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;1800-2199m&#39;</span>
-    <span class="k">elif</span> <span class="mi">2200</span> <span class="o">&lt;=</span> <span class="n">distance</span> <span class="o">&lt;=</span> <span class="mi">2600</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;2200-2600m&#39;</span>
-    <span class="k">elif</span> <span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">2600</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;2601m-&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;その他&#39;</span>
-
-<span class="c1"># 距離を新しいカテゴリに変換</span>
-<span class="n">df_daiwa</span><span class="p">[</span><span class="s1">&#39;距離分類&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_daiwa</span><span class="p">[</span><span class="s1">&#39;距離&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">classify_distance</span><span class="p">)</span>
-
-<span class="c1"># 距離分類ごとにグループ化</span>
-<span class="n">grouped</span> <span class="o">=</span> <span class="n">df_daiwa</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;距離分類&#39;</span><span class="p">)</span>
-
-<span class="c1"># 成績を表示</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">display_results</span><span class="p">(</span><span class="n">group</span><span class="p">):</span>
-    <span class="n">value_counts</span> <span class="o">=</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;確定着順&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
-
-    <span class="n">count_1</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">count_2</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">count_3</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">count_4</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">count_5</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="n">count_other</span> <span class="o">=</span> <span class="n">total</span> <span class="o">-</span> <span class="p">(</span><span class="n">count_1</span> <span class="o">+</span> <span class="n">count_2</span> <span class="o">+</span> <span class="n">count_3</span> <span class="o">+</span> <span class="n">count_4</span> <span class="o">+</span> <span class="n">count_5</span><span class="p">)</span>
-
-    <span class="c1"># 各割合を計算</span>
-    <span class="n">win_rate</span> <span class="o">=</span> <span class="n">count_1</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">place_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">count_1</span> <span class="o">+</span> <span class="n">count_2</span><span class="p">)</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">show_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">count_1</span> <span class="o">+</span> <span class="n">count_2</span> <span class="o">+</span> <span class="n">count_3</span><span class="p">)</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="n">board_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">count_1</span> <span class="o">+</span> <span class="n">count_2</span> <span class="o">+</span> <span class="n">count_3</span> <span class="o">+</span> <span class="n">count_4</span> <span class="o">+</span> <span class="n">count_5</span><span class="p">)</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
-
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">count_1</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">count_2</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">count_3</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">count_4</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">count_5</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">count_other</span><span class="si">}</span><span class="s2"> &quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;| 出走数: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2"> &quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;| 勝率: </span><span class="si">{</span><span class="n">win_rate</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">% &quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;| 連対率: </span><span class="si">{</span><span class="n">place_rate</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">% &quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;| 複勝率: </span><span class="si">{</span><span class="n">show_rate</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">% &quot;</span>
-        <span class="sa">f</span><span class="s2">&quot;| 掲示板率: </span><span class="si">{</span><span class="n">board_rate</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span>
-    <span class="p">)</span>
-
-<span class="c1"># 距離分類別の成績を表示</span>
-<span class="k">for</span> <span class="n">distance_category</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;距離分類: </span><span class="si">{</span><span class="n">distance_category</span><span class="si">}</span><span class="s2"> -&gt; 成績: </span><span class="si">{</span><span class="n">display_results</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>距離分類: 1000-1399m -&gt; 成績: 196-206-218-163-175-1418 | 出走数: 2376 | 勝率: 8.25% | 連対率: 16.92% | 複勝率: 26.09% | 掲示板率: 40.32%
-距離分類: 1400-1799m -&gt; 成績: 284-281-290-278-225-1831 | 出走数: 3189 | 勝率: 8.91% | 連対率: 17.72% | 複勝率: 26.81% | 掲示板率: 42.58%
-距離分類: 1800-2199m -&gt; 成績: 113-153-116-127-113-910 | 出走数: 1532 | 勝率: 7.38% | 連対率: 17.36% | 複勝率: 24.93% | 掲示板率: 40.60%
-距離分類: 2200-2600m -&gt; 成績: 17-10-20-21-12-153 | 出走数: 233 | 勝率: 7.30% | 連対率: 11.59% | 複勝率: 20.17% | 掲示板率: 34.33%
-距離分類: 2601m- -&gt; 成績: 29-29-31-30-36-163 | 出走数: 318 | 勝率: 9.12% | 連対率: 18.24% | 複勝率: 27.99% | 掲示板率: 48.74%
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_648754/1561077330.py:17: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  df_daiwa[&#39;距離分類&#39;] = df_daiwa[&#39;距離&#39;].apply(classify_distance)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_results</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.display_results(group)&gt;
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -597,7 +406,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ディープインパクト産駒の分析</p>
+        <p class="prev-next-title">ディープインパクト産駒</p>
       </div>
     </a>
     <a class="right-next"
